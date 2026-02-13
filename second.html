@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wait...</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffc2d1;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            padding-top: 150px;
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 48px;
+            color: #c9184a;
+            margin-bottom: 50px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        .yes {
+            background-color: #ff4d6d;
+            color: white;
+        }
+
+        .yes:hover {
+            background-color: #c9184a;
+        }
+
+        .no {
+            background-color: #f0f0f0;
+            color: #c9184a;
+        }
+
+        .no:hover {
+            background-color: #ddd;
+        }
+
+        #no-message {
+            margin-top: 30px;
+            font-size: 24px;
+            color: #c9184a;
+            font-family: 'Pacifico', cursive;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Are you sure you wanna read it? </h1>
+
+    <!-- YES button -->
+    <a href="letter.html">
+        <button class="yes">YES 💌</button>
+    </a>
+
+    <!-- NO button -->
+    <button class="no" onclick="showNoMessage()">NO 😢</button>
+
+    <!-- message will appear here -->
+    <div id="no-message"></div>
+
+    <script>
+        function showNoMessage() {
+            document.getElementById('no-message').innerText = "That's okay, I still love you 💖";
+        }
+    </script>
+
+</body>
+</html>
